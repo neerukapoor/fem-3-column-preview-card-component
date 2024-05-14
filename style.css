@@ -1,0 +1,123 @@
+:root {
+    --clr-orange: hsl(31, 77%, 52%);
+    --clr-cyan : hsl(184, 100%, 22%);
+    --clr-dark-cyan: hsl(179, 100%, 13%);
+
+
+    --clr-white : hsla(0, 0%, 100%, 0.75);
+    --clr-light-gray : hsl(0, 0%, 95%);
+
+    --fs-small: 15px;
+
+    --fw-small: 400;
+    --fw-large: 700;
+
+    --ff-lexand: "Lexend Deca", sans-serif;
+    --ff-shoulders: "Big Shoulders Display", sans-serif;;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-light-gray);
+}
+
+@media (min-width:50rem) {
+    body {
+        height: 100vh;
+    }
+}
+
+.container {
+    display: flex;
+    padding: 3rem;
+}
+
+.details {
+    width: 17.5rem;
+    padding: 2rem;
+}
+
+.sedan {
+    background-color: var(--clr-orange);
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.suv {
+    background-color: var(--clr-cyan);
+}
+
+.luxury {
+    background-color: var(--clr-dark-cyan);
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+h1 {
+    font-family: var(--ff-shoulders);
+    color: var(--clr-light-gray);
+    margin-top: 2rem;
+}
+
+p {
+    font-family: var(--ff-lexand);
+    color: var(--clr-white);
+    line-height: 1.6rem;
+    font-size: var(--fs-small);
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--clr-light-gray);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-family: var(--ff-lexand);
+}
+
+.sedan button {
+    color: var(--clr-orange);
+}
+
+.suv button {
+    color: var(--clr-cyan);
+}
+
+.luxury button {
+    color: var(--clr-dark-cyan);
+}
+
+@media (max-width: 50em) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sedan {
+        border-radius: 0.5rem 0.5rem 0rem 0rem;
+    }
+    
+    .luxury {
+        border-radius: 0rem 0rem 0.5rem 0.5rem;
+    }
+}
