@@ -34,16 +34,16 @@
 }
 
 body {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--clr-light-gray);
+    height: 100vh;
 }
 
-@media (min-width:50rem) {
+@media (min-width:766px) {
     body {
-        height: 100vh;
+        display: flex;
     }
 }
 
